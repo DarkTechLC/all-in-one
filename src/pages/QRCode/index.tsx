@@ -1,4 +1,5 @@
 import { AppRoute, AppTemplate } from '../../templates/AppTemplate';
+import { QRCodeGenerator } from './Generator';
 
 const routes: AppRoute[] = [
   {
@@ -9,7 +10,7 @@ const routes: AppRoute[] = [
   {
     label: 'Gerador',
     path: '/qrcode/generator',
-    component: () => <h1>Gerador</h1>,
+    component: QRCodeGenerator,
   },
   {
     label: 'Histórico',

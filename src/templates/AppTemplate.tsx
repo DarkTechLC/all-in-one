@@ -18,7 +18,7 @@ export function AppTemplate({ title, routes }: AppTemplateProps) {
   return (
     <>
       <header>
-        <h1 className="text-gray-500 font-bold md:text-lg mt-4">{title}</h1>
+        <h1 className="text-gray-400 font-bold md:text-lg mt-4">{title}</h1>
 
         <nav className="border-b border-gray-800 flex mt-4 overflow-x-auto scrollbar-none">
           {routes.map(({ path, label }) => (
@@ -35,13 +35,13 @@ export function AppTemplate({ title, routes }: AppTemplateProps) {
         </nav>
       </header>
 
-      <section className="mt-6">
+      <main className="mt-6 pb-4">
         <Switch>
           {routes.map(({ path, exact = true, component }) => (
             <Route key={path} path={path} exact={exact} component={component} />
           ))}
         </Switch>
-      </section>
+      </main>
     </>
   );
 }
