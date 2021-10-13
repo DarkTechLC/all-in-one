@@ -26,8 +26,8 @@ export function AppTemplate({ title, routes }: AppTemplateProps) {
               key={path}
               to={path}
               exact
-              className="cursor-pointer px-5 py-3 border-b-4 border-transparent text-sm md:text-base"
-              activeClassName="font-bold border-blue-500"
+              className="cursor-pointer px-5 py-3 border-b-4 border-transparent text-sm md:text-base transition-colors hover:border-gray-800"
+              activeClassName="font-bold border-blue-500 hover:border-blue-500"
             >
               {label}
             </NavLink>
