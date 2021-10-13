@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import QRCodeReact from 'qrcode.react';
+
+import { QRCode } from '../../components/QRCode';
 import { DownloadIcon } from '@heroicons/react/outline';
 
 export function QRCodeGenerator() {
@@ -21,7 +22,7 @@ export function QRCodeGenerator() {
     );
 
     downloadLinkEl.href = imageUrl;
-    downloadLinkEl.download = `${filename}.png`;
+    downloadLinkEl.download = `${filename}-${Date.now()}.png`;
 
     document.body.appendChild(downloadLinkEl);
     downloadLinkEl.click();
@@ -48,14 +49,7 @@ export function QRCodeGenerator() {
         {inputText && (
           <div className="flex flex-col items-center justify-center mt-8">
             <div className="bg-gray-200 p-4 rounded-3xl">
-              <QRCodeReact
-                id="qrCode"
-                value={inputText}
-                size={196}
-                bgColor="#E5E7EB"
-                fgColor="#111827"
-                level="M"
-              />
+              <QRCode id="qrCode" value={inputText} />
             </div>
 
             <button
@@ -63,7 +57,7 @@ export function QRCodeGenerator() {
               onClick={() => handleQRCodeDownload()}
             >
               <DownloadIcon className="h-6 w-6" />
-              Download
+              Baixar
             </button>
           </div>
         )}
