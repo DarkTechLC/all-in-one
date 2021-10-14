@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { DownloadIcon } from '@heroicons/react/outline';
 
 import { QRCode } from '../../components/QRCode';
-import { DownloadIcon } from '@heroicons/react/outline';
 
 export function QRCodeGenerator() {
   const [inputText, setInputText] = useState('');
@@ -53,6 +53,7 @@ export function QRCodeGenerator() {
             </div>
 
             <button
+              type="button"
               className="flex gap-1 mt-2 p-2 text-blue-500 font-semibold hover:text-blue-400"
               onClick={() => handleQRCodeDownload()}
             >
