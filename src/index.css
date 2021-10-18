@@ -17,10 +17,12 @@
 }
 
 html,
-body,
+body {
+  @apply bg-gray-900 text-gray-200 h-full;
+}
+
 #app {
-  @apply bg-gray-900;
-  height: 100%;
+  @apply min-h-screen relative;
 }
 
 code {
