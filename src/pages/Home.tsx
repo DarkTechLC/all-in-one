@@ -15,13 +15,13 @@ export function Home() {
             aumente o foco.
           </h2>
 
-          <Link
+          {/* <Link
             to="/login"
             tabIndex={0}
             className="bg-blue-500 rounded-2xl max-w-max px-10 py-4 font-bold text-gray-50 mt-8 transition-colors hover:bg-blue-600 focus:ring-4"
           >
             Acesse já
-          </Link>
+          </Link> */}
         </div>
 
         <div className="hidden sm:flex flex-col flex-1 justify-center items-center">
@@ -76,6 +76,13 @@ export function Home() {
               <div>
                 <h4 className="text-xl font-bold mb-2">QR Code App</h4>
                 <p>Um app completo para ler e criar QR Codes.</p>
+                <Link
+                  to="/qrcode"
+                  tabIndex={0}
+                  className="block font-bold text-blue-500 mt-4 py-1"
+                >
+                  Acesse já
+                </Link>
               </div>
             </li>
 
