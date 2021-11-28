@@ -48,8 +48,8 @@ export function QRCodeGenerator() {
 
         {inputText && (
           <div className="flex flex-col items-center justify-center mt-8">
-            <div className="bg-gray-200 p-4 rounded-3xl">
-              <QRCode id="qrCode" value={inputText} />
+            <div className="bg-gray-200 overflow-hidden rounded-3xl">
+              <QRCode id="qrCode" value={inputText} includeMargin />
             </div>
 
             <button
