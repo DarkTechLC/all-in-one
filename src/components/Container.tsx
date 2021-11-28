@@ -1,9 +1,15 @@
-import { ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
 
-export function Container({ children }: { children: ReactNode }) {
+type ContainerProps = HTMLAttributes<HTMLDivElement>;
+
+export function Container({
+  children,
+  className = '',
+  ...props
+}: ContainerProps) {
   return (
-    <div className="bg-gray-900 text-gray-200 h-full">
-      <div className="mx-auto max-w-3xl px-4">{children}</div>
+    <div className={`mx-auto max-w-5xl px-4 ${className}`} {...props}>
+      {children}
     </div>
   );
 }
