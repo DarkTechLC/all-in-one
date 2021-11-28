@@ -1,11 +1,12 @@
 import { AppRoute, AppTemplate } from '../../templates/AppTemplate';
+import { QRCodeReader } from './Reader';
 import { QRCodeGenerator } from './Generator';
 
 const routes: AppRoute[] = [
   {
     label: 'Leitor',
     path: '/qrcode',
-    component: () => <h1>Leitor</h1>,
+    component: QRCodeReader,
   },
   {
     label: 'Gerador',
